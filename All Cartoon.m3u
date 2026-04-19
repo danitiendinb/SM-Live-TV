@@ -10,8 +10,6 @@ https://cloudfrontnet.vercel.app/tplay/playout/209869/master.m3u8
 https://live20.bozztv.com/giatvplayout7/giatv-209611/index.m3u8
 #EXTINF:-1 tvg-id="TomandJerry2" tvg-logo="https://gia.tv/streams/pptv/208314.jpg?1750373428" group-title="Kids",Tom and Jerry 2
 https://live20.bozztv.com/giatvplayout7/giatv-208314/playlist.m3u8
-#EXTINF:-1 tvg-id="USBB1900004J9" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/USBB1900004J9_20240520T214715SQUARE.png" group-title="Kids",Toon Goggles
-https://d1eg24xrsfr6kv.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-b4b1bzxkt1uzo-prod/tg/tg/tg.m3u8
 #EXTINF:-1 tvg-id="MotuPatlu" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/6/64/WowKidz_Logo.png" group-title="Kids",WowKidz (Motu Patlu)
 https://live20.bozztv.com/giatvplayout7/giatv-209622/index.m3u8
 # Added for personal use - Doraemon placeholder (no working stream found yet)
@@ -20,6 +18,7 @@ https://live20.bozztv.com/giatvplayout7/giatv-209622/index.m3u8
 # NOTE: checked bozztv and cloudfrontnet sources on 2025-06-20, most Kids streams still active
 # NOTE: Tom and Jerry 2 uses playlist.m3u8 while others use index.m3u8 - intentional, both formats work
 # NOTE: Gopal Var logo is placeholder (Sony Aath logo used); replace when official Gopal Var logo URL is found
+# NOTE: Toon Goggles removed - English-language channel, outside scope of this list
 # NOTE: Toon Goggles is an English-language kids channel; removed from personal rotation - keeping entry commented below for reference
 # #EXTINF:-1 tvg-id="USBB1900004J9" tvg-logo="https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/USBB1900004J9_20240520T214715SQUARE.png" group-title="Kids",Toon Goggles
 # #https://d1eg24xrsfr6kv.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-b4b1bzxkt1uzo-prod/tg/tg/tg.m3u8
