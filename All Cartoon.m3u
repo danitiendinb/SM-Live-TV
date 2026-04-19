@@ -19,3 +19,4 @@ https://live20.bozztv.com/giatvplayout7/giatv-209622/index.m3u8
 # TODO: also look for a working Shin-chan stream
 # NOTE: checked bozztv and cloudfrontnet sources on 2025-06-20, most Kids streams still active
 # NOTE: Tom and Jerry 2 uses playlist.m3u8 while others use index.m3u8 - intentional, both formats work
+# NOTE: Gopal Var logo is placeholder (Sony Aath logo used); replace when official Gopal Var logo URL is found
