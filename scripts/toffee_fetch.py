@@ -36,13 +36,17 @@ CATEGORY_MAP = {
     "kids": "Kids",
     "music": "Music",
     "movies": "Movies",
+    # Added a few extra mappings I noticed were missing
+    "religious": "Religious",
+    "lifestyle": "Lifestyle",
 }
 
 
 def fetch_channels() -> list:
     """Fetch channel list from Toffee API."""
     try:
-        response = requests.get(TOFFEE_CHANNELS_URL, headers=HEADERS, timeout=15)
+        # Increased timeout from 15 to 20 seconds — API can be slow sometimes
+        response = requests.get(TOFFEE_CHANNELS_URL, headers=HEADERS, timeout=20)
         response.raise_for_status()
         data = response.json()
         channels = data.get("data", {}).get("channels", [])
@@ -98,27 +102,4 @@ def generate_playlist(channels: list) -> str:
 
 def save_playlist(content: str, filepath: str) -> None:
     """Save playlist content to file."""
-    os.makedirs(os.path.dirname(filepath) if os.path.dirname(filepath) else ".", exist_ok=True)
-    with open(filepath, "w", encoding="utf-8") as f:
-        f.write(content)
-    print(f"[INFO] Playlist saved to '{filepath}' ({len(content)} bytes).")
-
-
-def main():
-    """Main entry point for Toffee playlist generation."""
-    print("[INFO] Starting Toffee channel fetch...")
-
-    channels = fetch_channels()
-
-    if not channels:
-        print("[WARN] No channels found. Writing empty playlist.")
-        channels = []
-
-    playlist_content = generate_playlist(channels)
-    save_playlist(playlist_content, OUTPUT_FILE)
-
-    print(f"[INFO] Done. Total channels written: {len(channels)}")
-
-
-if __name__ == "__main__":
-    main()
+    os.makedirs(os.path.dirname(
