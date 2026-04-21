@@ -39,6 +39,9 @@ CATEGORY_MAP = {
     # Added a few extra mappings I noticed were missing
     "religious": "Religious",
     "lifestyle": "Lifestyle",
+    # Added these based on channels I saw in the API response
+    "documentary": "Documentary",
+    "cooking": "Lifestyle",
 }
 
 
@@ -95,11 +98,3 @@ def generate_playlist(channels: list) -> str:
         if not channel.get("id"):
             continue
         entry = build_m3u_entry(channel)
-        lines.append(entry)
-
-    return "".join(lines)
-
-
-def save_playlist(content: str, filepath: str) -> None:
-    """Save playlist content to file."""
-    os.makedirs(os.path.dirname(
